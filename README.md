@@ -7,4 +7,4 @@
 
 >### 터미널 창에서 Django 프로젝트
 
-![ex_screenshot](./img/django001.png)
+![ex_screenshot](./img/django001.PNG)
