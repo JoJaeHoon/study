@@ -7,4 +7,5 @@
 
 >### 터미널 창에서 Django 프로젝트
 
-![django001](./img/django001.PNG){: width="100" height="100"}
+<!--![django001](./img/django001.PNG){: width="100" height="100"}-->
+<img src="./img/django001.PNG" width="100" height="100">
