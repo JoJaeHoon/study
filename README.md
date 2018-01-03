@@ -14,7 +14,7 @@
 
 2. 터미널 창에서 Django 프로젝트 뼈대 생성  
 단축기 Alt + F12
->![django001](./img/django001.PNG)
+>![django001](./img/django001.PNG)  
 >![django001](./img/django002.PNG)  
 -임의로 정한 main 장고 프로젝트 생성  
 `django-admin startproject main`  
