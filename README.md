@@ -1,4 +1,4 @@
 ### study
->![python](./img/py_1.PNG)
+>![python](./img/py_3.PNG)
 
->![python](./img/py_2.PNG)
+>![python](./img/py_4.PNG)
