@@ -54,5 +54,13 @@
 6. 애플리케이션 등록  
  프로젝트에 포함되는 애플리케이션들은 모두 설정 파일에 지정되어야 하므로 북마크 앱도 settings.py 파일에 등록해야 합니다.  
  북마크 앱의 설정 클래스는 `'bookmark.apps.BookmarkConfig'`  
- - `vi settings.py`, (i = insert, ESC + :w = save, :q = close)  
+ - `vi settings.py`,  
+ - (i = insert, ESC + :w = save, :q = close)  
  >![python](./img/py_10.PNG)  
+7. 개발 코딩하기 - 모델  
+ 모델 작업은 데이터베이스에 테이블을 생성하도록 해주는 작업  
+ 1. 테이블 정의
+ 장고에서는 테이블을 하나의 클래스로 정의하고, 테이블의 컬럼은 클래스의 변수로 매핑합니다.  
+ 테이블 클래스는 django.db.models.Model 클래스 상속받아 정의하고, 각 클래스 변수의 타입도 장고에서 미리 정의해 둔 필드 클래스 사용
+ 
+ 
