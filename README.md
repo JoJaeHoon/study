@@ -44,13 +44,15 @@
  `python manage.py migrate`  
  사용자 및 권한 그룹 테이블을 만들어주기 위해서 프로젝트 개발 시작 시점에 이 명령을 실행하는 것입니다.  
  이 명령이 실행되면 디렉터리에 db.sqlite3 파일이 생성됩니다. 
-4. 슈퍼유저 생성
- `python manage.py createsuperuser`
+4. 슈퍼유저 생성  
+ `python manage.py createsuperuser`  
  명령어를 실행하게되면 이름/이메일/비밀번호를 입력하면 관리자가 생성됩니다.  
 5. 애플리케이션 생성  
- `python manage.py startapp bookmark`
-6. 애플리케이션 등록
- 프로젝트에 포함되는 애플리케이션들은 모두 설정 파일에 지정되어야 하므로 북마크 앱도 settings.py 파일에 등록해야 합니다.
- 북마크 앱의 설정 클래스는 `'bookmark.apps.BookmarkConfig'`
- - `vi settings.py`, (i = insert, ESC + :w = save, :q = close)
- 
+ `python manage.py startapp bookmark`  
+ >![python](./img/py_8.PNG)  
+ >![python](./img/py_9.PNG)  
+6. 애플리케이션 등록  
+ 프로젝트에 포함되는 애플리케이션들은 모두 설정 파일에 지정되어야 하므로 북마크 앱도 settings.py 파일에 등록해야 합니다.  
+ 북마크 앱의 설정 클래스는 `'bookmark.apps.BookmarkConfig'`  
+ - `vi settings.py`, (i = insert, ESC + :w = save, :q = close)  
+ >![python](./img/py_10.PNG)  
