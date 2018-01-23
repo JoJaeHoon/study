@@ -9,7 +9,7 @@
 `pip install django`  
  - PIP 파이썬으로 작성된 패키지를 설치,관리하는 시스템  
 `django-admin.py startproject jjhsite`  
->![python](./img/py_7.PNG)  
+>![python](./img/py_5.PNG)  
  - jjhsite 디렉토리로 프로젝트를 만듬  
 >![python](./img/py_3.PNG)  
 >![python](./img/py_4.PNG)  
@@ -19,10 +19,11 @@
   - SQLite3 : 독립적이고 서버가 불필요하며,설정도 필요없고 트랜잭션을 지원함  
   - 트랜잭션 : 데이터베이스의 상태를 변화시키기 위해 수행하는 작업의 단위 ( SQL를 이용해 데이터베이스 접근하는 것 )  
   MySQL이나 Oracle 다른 데이터 베이스 변경시 파일 수정  
-  >![python](./img/py_6.PNG)  
+  >![python](./img/py_7.PNG)  
  2. 템플릿 관련 사항도 확인합니다. DIRS 항목은 프로젝트 템플릿 파일이 위치한 디렉터리를 지정합니다.  
-    템플릿 파일을 파일을 찾을, 프로젝트 템플릿 디렉터리는 애플리케이션 템플릿 디렉터리보다 먼저 검색합니다.
-    - 책 4장의 예제부터 항목을 사용
+    템플릿 파일을 파일을 찾을, 프로젝트 템플릿 디렉터리는 애플리케이션 템플릿 디렉터리보다 먼저 검색합니다.    
+    - 책 4장의 예제부터 항목을 사용  
+    >![python](./img/py_6.PNG)  
  3. 정적 파일에 관한 설정. STATIC_URL항목은 최초 settings.py 파일이 만들어질때 지정해준 그대로이고, STATICFILES_DIRS항목은 프로젝트 정적  
     파일이 위치한 디렉터리를 의미하는데 수동으로 직접 지정합니다.
     ```bash
