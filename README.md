@@ -77,6 +77,8 @@
    파이썬2에서는 __unicode__를쓰는데,파이썬3에서는 __str__ 으로 바뀜  
    `@python_2_unicode_compatible`  
    파이썬2에서는 __str__함수가 __unicode__ 변경되어 적용, 파이썬3은 __str__그대로 적용  
+   파이썬에서 __은 특별한 메서드라는 뜻, `def __str__(self)` : 문자열화 함수  
+   파이썬에서 함수를 정의할 때는 def문을 사용한다. `def` 정의하다라는 뜻의 영어단어 define에서 추린 것
    ![python](./img/py_11.PNG)  
  - Admin사이트에 테이블 반영  
    ![python](./img/py_12.PNG)  
