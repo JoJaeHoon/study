@@ -1,8 +1,8 @@
 ### 실전 프로그램 개발 - Bookmark
 1. 프로젝트 생성  
 `pip install --upgrade`
- - 버전이 낮을 시 업그레이드 설치 하라는 오류 메세지
- >![python](./img/py_2.PNG)  
+ - 버전이 낮을 시 업그레이드 설치 하라는 오류 메세지  
+ ![python](./img/py_2.PNG)  
 프로젝트를 생성하기전 가상 환경 사용  
 `source venv/bin/activate` ( 비활성화 : `deactivate` )  
  - 가상환경 활성화  
