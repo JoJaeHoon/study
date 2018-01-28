@@ -18,7 +18,7 @@
     * 트랜잭션 : 데이터베이스의 상태를 변화시키기 위해 수행하는 작업의 단위 (SQL를 이용해 데이터베이스 접근하는 것)  
   - MySQL이나 Oracle 다른 데이터 베이스 변경시 파일 수정  
     ![python](./img/py_7.PNG)  
-ex) ```
+    ```bash
     DATABASES = {
         'default' : {
             'ENGINE' : 'django.db.backends.mysql',
