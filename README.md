@@ -30,56 +30,56 @@
         }
     }
     ```
- 2. 템플릿 관련 사항도 확인합니다. DIRS 항목은 프로젝트 템플릿 파일이 위치한 디렉터리를 지정합니다.  
-    템플릿 파일을 파일을 찾을, 프로젝트 템플릿 디렉터리는 애플리케이션 템플릿 디렉터리보다 먼저 검색합니다.    
-    - 책 4장의 예제부터 항목을 사용  
-    >![python](./img/py_6.PNG)  
- 3. 정적 파일에 관한 설정. STATIC_URL항목은 최초 settings.py 파일이 만들어질때 지정해준 그대로이고, STATICFILES_DIRS항목은 프로젝트 정적  
-    파일이 위치한 디렉터리를 의미하는데 수동으로 직접 지정합니다.
+  - 템플릿 관련 사항도 확인합니다. DIRS 항목은 프로젝트 템플릿 파일이 위치한 디렉터리를 지정합니다.  
+    템플릿 파일을 파일을 찾을, 프로젝트 템플릿 디렉터리는 애플리케이션 템플릿 디렉터리보다 먼저 검색합니다.  
+    * 책 4장의 예제부터 항목을 사용  
+    ![python](./img/py_6.PNG)  
+  - 정적 파일에 관한 설정. STATIC_URL항목은 최초 settings.py 파일이 만들어질때 지정해준 그대로이고, STATICFILES_DIRS항목은 프로젝트 정적  
+    파일이 위치한 디렉터리를 의미하는데 수동으로 직접 지정합니다.  
     ```bash
     STATIC_URL = '/static/'
     ```  
     - 책 4장의 예제부터 항목을 사용  
- 4. 타임존 지정  
- `TIME_ZONE = 'UTC'`  
-  - 최초에는 세계표준시(UTC) -> 한국 시간으로 'Asia/Seoul' 변경  
- 5. 미디어 관련 사항을 지정, 이 항목들은 파일 업로드 기능을 개발할 때 필요한 설정  
-  `MEDIA_URL = '/media/'`  
-  `MEDIA_ROOT = os.path.join(BASE_DIR, 'media')`  
-  - 책 10장의 예제부터 항목을 사용  
- 6. 개발하고 있는 애플리케이션을 설정파일에 등록  
-  `LANGUAGE_CODE = 'en-us'` -> `LANGUAGE_CODE = 'ko-kr`  
-  - 한글로 지정하면 Admin사이트의 메뉴 및 설명 등의 화면이 한글로 표시  
+  - 타임존 지정  
+    * `TIME_ZONE = 'UTC'`  
+    * 최초에는 세계표준시(UTC) -> 한국 시간으로 'Asia/Seoul' 변경  
+  - 미디어 관련 사항을 지정, 이 항목들은 파일 업로드 기능을 개발할 때 필요한 설정  
+    `MEDIA_URL = '/media/'`  
+    `MEDIA_ROOT = os.path.join(BASE_DIR, 'media')`  
+    * 책 10장의 예제부터 항목을 사용  
+  - 개발하고 있는 애플리케이션을 설정파일에 등록  
+    `LANGUAGE_CODE = 'en-us'` -> `LANGUAGE_CODE = 'ko-kr`  
+    한글로 지정하면 Admin사이트의 메뉴 및 설명 등의 화면이 한글로 표시  
 3. 기본 테이블 생성  
- `python manage.py migrate`  
  사용자 및 권한 그룹 테이블을 만들어주기 위해서 프로젝트 개발 시작 시점에 이 명령을 실행하는 것입니다.  
- 이 명령이 실행되면 디렉터리에 db.sqlite3 파일이 생성됩니다. 
+ 이 명령이 실행되면 디렉터리에 db.sqlite3 파일이 생성됩니다.  
+ `python manage.py migrate`  
 4. 슈퍼유저 생성  
- `python manage.py createsuperuser`  
  명령어를 실행하게되면 이름/이메일/비밀번호를 입력하면 관리자가 생성됩니다.  
+ `python manage.py createsuperuser`  
 5. 애플리케이션 생성  
  `python manage.py startapp bookmark`  
- >![python](./img/py_8.PNG)  
- >![python](./img/py_9.PNG)  
+ ![python](./img/py_8.PNG)  
+ ![python](./img/py_9.PNG)  
 6. 애플리케이션 등록  
- 프로젝트에 포함되는 애플리케이션들은 모두 설정 파일에 지정되어야 하므로 북마크 앱도 settings.py 파일에 등록해야 합니다.  
- 북마크 앱의 설정 클래스는 `'bookmark.apps.BookmarkConfig'`  
+ - 프로젝트에 포함되는 애플리케이션들은 모두 설정 파일에 지정되어야 하므로 북마크 앱도 settings.py 파일에 등록해야 합니다.  
+ - 북마크 앱의 설정 클래스는 `'bookmark.apps.BookmarkConfig'`  
  - `vi settings.py`,  
  - (i = insert, ESC + :w = save, :q = close)  
- >![python](./img/py_10.PNG)  
+ ![python](./img/py_10.PNG)  
 7. 개발 코딩하기 - 모델  
  모델 작업은 데이터베이스에 테이블을 생성하도록 해주는 작업  
- 1. 테이블 정의
- 장고에서는 테이블을 하나의 클래스로 정의하고, 테이블의 컬럼은 클래스의 변수로 매핑합니다.  
- 테이블 클래스는 django.db.models.Model 클래스 상속받아 정의하고, 각 클래스 변수의 타입도 장고에서 미리 정의해 둔 필드 클래스 사용
- >![python](./img/py_11.PNG)  
- 2. Admin사이트에 테이블 반영
- >![python](./img/py_12.PNG)  
- 3. 데이터베이스 변경 사항 반영
- >![python](./img/py_13.PNG)  
- >![python](./img/py_14.PNG)  
- 4. 테이블 모습 확인
- `python manage.py runserver 0.0.0.0:8000`
- 주소창에 http://localhost:8000/admin/
- >![python](./img/py_15.PNG)  
+ - 테이블 정의
+   장고에서는 테이블을 하나의 클래스로 정의하고, 테이블의 컬럼은 클래스의 변수로 매핑합니다.  
+   테이블 클래스는 django.db.models.Model 클래스 상속받아 정의하고, 각 클래스 변수의 타입도 장고에서 미리 정의해 둔 필드 클래스 사용
+   ![python](./img/py_11.PNG)  
+ - Admin사이트에 테이블 반영
+   ![python](./img/py_12.PNG)  
+ - 데이터베이스 변경 사항 반영
+   ![python](./img/py_13.PNG)  
+   ![python](./img/py_14.PNG)  
+ - 테이블 모습 확인
+   `python manage.py runserver 0.0.0.0:8000`
+   주소창에 http://localhost:8000/admin/
+   ![python](./img/py_15.PNG)  
  
