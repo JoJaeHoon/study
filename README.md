@@ -68,18 +68,18 @@
  - (i = insert, ESC + :w = save, :q = close)  
  ![python](./img/py_10.PNG)  
 7. 개발 코딩하기 - 모델  
- 모델 작업은 데이터베이스에 테이블을 생성하도록 해주는 작업  
- - 테이블 정의
+   모델 작업은 데이터베이스에 테이블을 생성하도록 해주는 작업  
+ - 테이블 정의  
    장고에서는 테이블을 하나의 클래스로 정의하고, 테이블의 컬럼은 클래스의 변수로 매핑합니다.  
-   테이블 클래스는 django.db.models.Model 클래스 상속받아 정의하고, 각 클래스 변수의 타입도 장고에서 미리 정의해 둔 필드 클래스 사용
+   테이블 클래스는 django.db.models.Model 클래스 상속받아 정의하고, 각 클래스 변수의 타입도 장고에서 미리 정의해 둔 필드 클래스 사용  
    ![python](./img/py_11.PNG)  
- - Admin사이트에 테이블 반영
+ - Admin사이트에 테이블 반영  
    ![python](./img/py_12.PNG)  
- - 데이터베이스 변경 사항 반영
+ - 데이터베이스 변경 사항 반영  
    ![python](./img/py_13.PNG)  
    ![python](./img/py_14.PNG)  
- - 테이블 모습 확인
-   `python manage.py runserver 0.0.0.0:8000`
-   주소창에 http://localhost:8000/admin/
+ - 테이블 모습 확인  
+   `python manage.py runserver 0.0.0.0:8000`  
+   주소창에 http://localhost:8000/admin/  
    ![python](./img/py_15.PNG)  
  
