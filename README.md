@@ -72,7 +72,12 @@
  - 테이블 정의  
    장고에서는 테이블을 하나의 클래스로 정의하고, 테이블의 컬럼은 클래스의 변수로 매핑합니다.  
    테이블 클래스는 django.db.models.Model 클래스 상속받아 정의하고, 각 클래스 변수의 타입도 장고에서 미리 정의해 둔 필드 클래스 사용  
-   ![python](./img/py_11.PNG)  
+   django에 있는 db모듈에서(from django.db)models라는 모듈을 가져오라는 뜻(import)  
+   pytion2/pytion3 호환 방법  
+   파이썬2에서는 __unicode__를쓰는데,파이썬3에서는 __str__ 으로 바뀜  
+   `@python_2_unicode_compatible`  
+   파이썬2에서는 __str__함수가 __unicode__ 변경되어 적용, 파이썬3은 __str__그대로 적용  
+   ![python](./img/py_11.PNG)  
  - Admin사이트에 테이블 반영  
    ![python](./img/py_12.PNG)  
  - 데이터베이스 변경 사항 반영  
