@@ -58,7 +58,7 @@
  명령어를 실행하게되면 이름/이메일/비밀번호를 입력하면 관리자가 생성됩니다.  
  `python manage.py createsuperuser`  
 5. 애플리케이션 생성  
- `python manage.py startapp bookmark`  
+ `python manage.py startapp bookmark`
  ![python](./img/py_8.PNG)  
  ![python](./img/py_9.PNG)  
 6. 애플리케이션 등록  
