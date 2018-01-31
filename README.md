@@ -89,16 +89,16 @@
    `python manage.py runserver 0.0.0.0:8000`  
    주소창에 http://localhost:8000/admin/  
    ![python](./img/py_15.PNG)  
-8. 개발 코딩하기 - URLconf (URL configuration)
- - 자신이 생성한 jjhsite 라는 디렉토리안에 urls.py을 편집한다. `vi urls.py`
- - 장고의 내장 함수 url 임포트
+8. 개발 코딩하기 - URLconf (URL configuration)  
+ - 자신이 생성한 jjhsite 라는 디렉토리안에 urls.py을 편집한다. `vi urls.py`  
+ - 장고의 내장 함수 url 임포트  
  - `from bookmark.views import BookmarkLV, BookmarkDV`  
     뷰 모듈의 관련 클래스를 임포트, 뒤에서 bookmark/views.py 에서 정의합니다.  
  - `url(r'^admin/', admin.site.urls)` -> 이미 정의된 URLconf를 include() 함수로 가져와서 사용가능  
    `url(r'^admin/',include(admin.site.urls), name)` name은 URL에 이름을 붙인 것으로 뷰를 식별합니다.  
-   장고는 admin/ 로 시작하는 모든 URL을 view와 대조합니다. 많은 URL이 admin URL에 포함될 수 있어서 정규 표현식을 사용합니다. 
-   django.conf.urls모듈에서 두 개의 함수를 가져옵니다. 이 함수는 URLconf 모듈에 대한 전체 Python을 가져오는데 경로를 포함 할수있게해줍니다.  
-   django.contrib에서 호출하는 함수는 Django 관리 사이트의 URL을 로드하는 함수에 의해 호출됩니다.  
-   r은 정규 표현식 문자열 앞의문자, '^' 패턴이 문자열의 시작과일치해야 함, '$' 패턴이 문자열의 끝에 일치해야 함
+   장고는 admin/ 로 시작하는 모든 URL을 view와 대조합니다. 많은 URL이 admin URL에 포함될 수 있어서 정규 표현식을 사용합니다.  
+   django.conf.urls모듈에서 두 개의 함수를 가져옵니다. 이 함수는 URLconf 모듈에 대한 전체 Python을 가져오는데 경로를 포함 할수있게해줍니다.  
+   django.contrib에서 호출하는 함수는 Django 관리 사이트의 URL을 로드하는 함수에 의해 호출됩니다.  
+   r은 정규 표현식 문자열 앞의문자, '^' 패턴이 문자열의 시작과일치해야 함, '$' 패턴이 문자열의 끝에 일치해야 함  
     
 
