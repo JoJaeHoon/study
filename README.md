@@ -110,11 +110,12 @@
      - DetailView 특정 글 상세내용 표시 ( 디폴트 컨텍스트 변수명 : object )  
        model에 해당 모델의 특정 레코드를 컨텍스트 변수에 담음  
    - 3. templates  
+     ![python](./img/py_17.PNG)  
+     ![python](./img/py_20.PNG)  
      - `cd bookmark/templates/bookmark`  
      - `vi bookmark_list.html`  
      - object_list 객체는 BookmarkLV 클래스형 뷰에서 넘겨주는 파라미터  
      - {{ bookmark }} 템플릿 변수는 Bookmark 테이블의 특정 레코드 하나를 의미합니다. 해당 객체는 models.py의 __str__() 메소드를 호출해 결과를 출력합니다.  
      - urls.py 에서 정의한 url 3번째 인자였던 name의 값이 `<a href="{% url 'bookMarkDetail' bookmark.id %}">` '' 안의 텍스트와 매칭됨  
-     ![python](./img/py_17.PNG)  
-     ![python](./img/py_20.PNG)  
+     
 
