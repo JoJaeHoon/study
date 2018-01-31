@@ -92,6 +92,7 @@
 8. 개발 코딩하기 - URLconf (URL configuration)  
    코딩 순서 urls.py(URL 정의) -> views.py(뷰 로직 작성) -> templates (템플릿 파일작성)  
    1. urls.py
+   ![python](./img/py_18.PNG)  
    - 자신이 생성한 jjhsite 라는 디렉토리안에 urls.py을 편집한다. `vi urls.py`  
    - 장고의 내장 함수 url 임포트  
    - `from bookmark.views import BookmarkLV, BookmarkDV`  
@@ -103,6 +104,7 @@
    - django.contrib에서 호출하는 함수는 Django 관리 사이트의 URL을 로드하는 함수에 의해 호출됩니다.  
    - r은 정규 표현식 문자열 앞의문자, '^' 패턴이 문자열의 시작과일치해야 함, '$' 패턴이 문자열의 끝에 일치해야 함  
    2. views.py  
+   ![python](./img/py_19.PNG)  
    - ListView 디폴트 지정 속성 ( 컨텍스트 변수 : object_list, 템플릿 파일 : bookmark_list.html )  
      게시판의 글 목록 전체를 표시하거나, DB테이블의 레코드 전체를 리스트로 표시할 때 활용함  
    - DetailView 특정 글 상세내용 표시 ( 디폴트 컨텍스트 변수명 : object )  
@@ -112,5 +114,7 @@
    - `vi bookmark_list.html`  
    - object_list 객체는 BookmarkLV 클래스형 뷰에서 넘겨주는 파라미터  
    - {{ bookmark }} 템플릿 변수는 Bookmark 테이블의 특정 레코드 하나를 의미합니다. 해당 객체는 models.py의 __str__() 메소드를 호출해 결과를 출력합니다.  
-   - urls.py 에서 정의한 url 3번째 인자였던 name의 값이 `<a href="{% url 'bookMarkDetail' bookmark.id %}">` '' 안의 텍스트와 매칭됨
+   - urls.py 에서 정의한 url 3번째 인자였던 name의 값이 `<a href="{% url 'bookMarkDetail' bookmark.id %}">` '' 안의 텍스트와 매칭됨  
+   ![python](./img/py_17.PNG)  
+   ![python](./img/py_20.PNG)  
 
