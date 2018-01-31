@@ -103,13 +103,13 @@
      - django.conf.urls모듈에서 두 개의 함수를 가져옵니다. 이 함수는 URLconf 모듈에 대한 전체 Python을 가져오는데 경로를 포함 할수있게해줍니다.   
      - django.contrib에서 호출하는 함수는 Django 관리 사이트의 URL을 로드하는 함수에 의해 호출됩니다.   
      - r은 정규 표현식 문자열 앞의문자, '^' 패턴이 문자열의 시작과일치해야 함, '$' 패턴이 문자열의 끝에 일치해야 함  
-   - 2. views.py  
+   - 2. views.py  
      ![python](./img/py_19.PNG)  
      - ListView 디폴트 지정 속성 ( 컨텍스트 변수 : object_list, 템플릿 파일 : bookmark_list.html )  
        게시판의 글 목록 전체를 표시하거나, DB테이블의 레코드 전체를 리스트로 표시할 때 활용함  
      - DetailView 특정 글 상세내용 표시 ( 디폴트 컨텍스트 변수명 : object )  
        model에 해당 모델의 특정 레코드를 컨텍스트 변수에 담음  
-   - 3. templates  
+   - 3. templates  
      - `cd bookmark/templates/bookmark`  
      - `vi bookmark_list.html`  
      - object_list 객체는 BookmarkLV 클래스형 뷰에서 넘겨주는 파라미터  
