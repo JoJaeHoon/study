@@ -117,5 +117,6 @@
      - object_list 객체는 BookmarkLV 클래스형 뷰에서 넘겨주는 파라미터  
      - {{ bookmark }} 템플릿 변수는 Bookmark 테이블의 특정 레코드 하나를 의미합니다. 해당 객체는 models.py의 __str__() 메소드를 호출해 결과를 출력합니다.  
      - urls.py 에서 정의한 url 3번째 인자였던 name의 값이 `<a href="{% url 'bookMarkDetail' bookmark.id %}">` '' 안의 텍스트와 매칭됨  
+     ![python](./img/py_21.PNG)![python](./img/py_22.PNG)  
      
 
