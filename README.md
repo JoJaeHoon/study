@@ -91,7 +91,7 @@
    ![python](./img/py_15.PNG)  
 8. 개발 코딩하기 - URLconf (URL configuration)  
    코딩 순서 urls.py(URL 정의) -> views.py(뷰 로직 작성) -> templates (템플릿 파일작성)  
-   1. urls.py  
+   - #1. urls.py#  
    ![python](./img/py_18.PNG)  
    - 자신이 생성한 jjhsite 라는 디렉토리안에 urls.py을 편집한다. `vi urls.py`  
    - 장고의 내장 함수 url 임포트  
